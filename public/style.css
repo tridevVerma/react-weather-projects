@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Piazzolla", serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --main-bg: #1e272e;
+  --main-color: #0097e6;
+}
+
+.nav-bg {
+  background-color: var(--main-bg);
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a:hover {
+  color: var(--main-color) !important;
+}
+
+.fa-snowflake {
+  transition: all linear;
+  animation: rotate 2s linear infinite;
+  color: var(--main-color);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.header-left,
+.header-right {
+  height: 85.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.header-left p,
+.about-right p {
+  font-size: 2rem;
+}
+
+.header-left h1,
+.about-right h1 {
+  font-size: 4rem;
+  margin: 1rem 0 4rem 0;
+}
+
+.header-left button,
+.about-right button,
+.error-btn {
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px #000;
+  outline: none;
+}
+
+.header-left button:hover,
+.about-right button:hover,
+.error-btn:hover {
+  box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+footer {
+  width: 100%;
+  background-color: var(--main-bg);
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+  color: white;
+  line-height: 5rem;
+  font-size: 1.4rem;
+}
+
+.about-left,
+.about-right {
+  height: 85.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-right h1 {
+  text-align: center;
+}
+
+.error-404 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: auto;
+}
+
+.error-404 figure {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.error-404 figure img {
+  width: auto;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.error-404 a {
+  text-align: center;
+}
+
+/* Weather page */
+
+.weather-form {
+  margin: 4rem auto;
+}
+
+#button-addon2:hover {
+  background-color: var(--main-bg);
+}
+
+.output {
+  background-color: var(--main-bg);
+  color: white;
+  margin: 5rem auto;
+}
+
+.current-day {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.weather-forecast {
+  background-color: #33373a;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.weather-forecast h1 {
+  font-size: 4rem;
+}
+
+.weather-forecast h2 {
+  font-size: 2.5rem;
+}
+
+.weather-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.temp-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp-status i {
+  transform: scale(6);
+}
+
+/* responsive code */
+
+@media (max-width: 768px) {
+  .header-left {
+    height: auto;
+    margin: 5rem 0;
+  }
+
+  .about-right {
+    height: auto;
+    margin-bottom: 4rem;
+  }
+
+  .header-left p,
+  .about-right p {
+    font-size: 1.5rem;
+  }
+
+  .header-left h1,
+  .about-right h1 {
+    font-size: 3rem;
+    margin: 1rem 0 4rem 0;
+  }
+
+  .header-right,
+  .about-left {
+    height: auto;
+    margin-top: 3rem;
+  }
+
+  .temp-status i {
+    transform: scale(4);
+  }
+  .weather-content h1 {
+    font-size: 2.5rem;
+  }
+}
